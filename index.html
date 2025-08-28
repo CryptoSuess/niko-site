@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NIKO Wolf — Loyalty Is Our Value</title>
+  <meta name="description" content="NIKO Wolf — Guardian of the Blockchain. Loyalty Is Our Value. Built on Base." />
+  <meta property="og:title" content="NIKO Wolf — Loyalty Is Our Value" />
+  <meta property="og:description" content="Guardian of the Blockchain. Built on Base." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="NIKO logo" class="brand-logo"/>
+        <span class="brand-name">$NIKO</span>
+      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#token">Token</a>
+        <a href="#links">Links</a>
+        <a class="btn buy" id="buyBtn" href="#">Buy</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-copy">
+      <h1>NIKO Wolf <span class="accent">— Loyalty Is Our Value</span></h1>
+      <p class="lead">The guardian wolf of the blockchain. Built on <strong>Base</strong>, driven by community, and obsessed with protection, strength, and unity.</p>
+      <div class="cta">
+        <a class="btn primary" id="tradeLink" href="#">Trade on UniSwap</a>
+        <a class="btn secondary" id="chartLink" href="#">Open DEXTools</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Base</span>
+        <span class="badge">Meme</span>
+        <span class="badge">Community</span>
+        <span class="badge">Guardian</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/coin.png" alt="NIKO coin" class="coin" />
+    </div>
+  </section>
+
+  <section id="about" class="section container">
+    <h2>About NIKO</h2>
+    <p>NIKO is the <em>Guardian of the Blockchain</em> — a loyal wolf protecting the Base ecosystem. Our culture is simple: protect the pack, reward loyalty, and keep building. No promises, just delivery.</p>
+  </section>
+
+  <section id="token" class="section container token">
+    <h2>Token Details</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Contract</h3>
+        <code id="contractDisplay">0xYOUR_CONTRACT_HERE</code>
+        <button class="copy" data-copy="#contractDisplay">Copy</button>
+      </div>
+      <div class="card">
+        <h3>Chain</h3>
+        <p>Base</p>
+      </div>
+      <div class="card">
+        <h3>Supply</h3>
+        <p>1,000,000,000 $NIKO</p>
+      </div>
+      <div class="card">
+        <h3>Locked</h3>
+        <p>90% LP locked for 2 years</p>
+      </div>
+    </div>
+    <div class="notice">* Always verify the contract address in our official channels before trading.</div>
+  </section>
+
+  <section id="links" class="section container links">
+    <h2>Official Links</h2>
+    <div class="grid links-grid">
+      <a class="linkcard" id="tgLink" target="_blank" rel="noopener">Telegram</a>
+      <a class="linkcard" id="xLink" target="_blank" rel="noopener">X (Twitter)</a>
+      <a class="linkcard" id="dexsLink" target="_blank" rel="noopener">DexScreener</a>
+      <a class="linkcard" id="dextLink" target="_blank" rel="noopener">DEXTools</a>
+      <a class="linkcard" id="uncxLink" target="_blank" rel="noopener">UNCX Lock</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot-inner">
+      <div class="brand">
+        <img src="assets/logo.png" class="brand-logo small" alt="NIKO logo small"/>
+        <span class="brand-name">$NIKO</span>
+      </div>
+      <div class="foot-right">© <span id="year"></span> NIKO Wolf — Loyalty Is Our Value.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
