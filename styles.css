@@ -14,16 +14,22 @@
 .btn.primary:hover{filter:brightness(1.1)}
 .btn.secondary{border-color:#3b5ccc;color:#cfe3ff}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:72px 20px}
+.hero-copy{min-width:0}
 .hero h1{font-size:44px;line-height:1.1;margin:0 0 8px}
 .accent{color:#67e8f9}
 .lead{color:#bcd2ff;font-size:18px}
-.cta{display:flex;gap:12px;margin:18px 0}
+.cta{display:flex;gap:12px;margin:18px 0;flex-wrap:wrap}
 .badges{display:flex;gap:8px;flex-wrap:wrap}
 .badge{background:#0f1b3a;border:1px solid #21306b;padding:6px 10px;border-radius:999px;font-size:12px;color:#a6c3ff}
 .hero-art{display:flex;justify-content:center}
-.coin{width:100%;max-width:420px;filter:drop-shadow(0 20px 50px rgba(37,99,235,.35))}
+.coin{width:100%;max-width:420px;filter:drop-shadow(0 20px 50px rgba(37,99,235,.35));border-radius:20px}
 .section{padding:40px 0}
 .section h2{margin:0 0 14px;font-size:28px}
+.about .bullets{margin:10px 0 12px 18px}
+.about .bullets li{margin:6px 0}
+.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.pill{background:#0f1b3a;border:1px solid #21306b;border-radius:999px;padding:6px 10px;font-size:13px;color:#a6c3ff}
+blockquote{margin:16px 0;padding:10px 12px;border-left:3px solid #2b3f86;background:#0a132a;color:#cfe3ff;border-radius:6px}
 .token .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .card{background:#0e1733;border:1px solid #1b2b63;padding:16px;border-radius:16px;min-height:100px}
 .card h3{margin:0 0 6px;font-size:16px;color:#9fc1ff}
@@ -36,8 +42,5 @@ code{display:block;word-break:break-all;background:#0a132a;padding:8px;border-ra
 .linkcard:hover{filter:brightness(1.05)}
 .footer{border-top:1px solid #1b2342;margin-top:40px}
 .foot-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr;gap:16px;padding-top:32px}
-  .token .grid{grid-template-columns:repeat(2,1fr)}
-  .links-grid{grid-template-columns:repeat(2,1fr)}
-}
+@media (max-width:1020px){.hero{grid-template-columns:1fr;gap:16px;padding-top:32px}.hero-art{order:2}.coin{max-width:360px;margin:0 auto}}
+@media (max-width:900px){.token .grid{grid-template-columns:repeat(2,1fr)}.links-grid{grid-template-columns:repeat(2,1fr)}}
