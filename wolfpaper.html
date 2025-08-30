@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NIKO — Wolf Paper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+        /* Page-local tweaks only; keeps your main CSS intact */
+        .paper {
+            padding-bottom: 40px;
+        }
+
+        .paper-hero {
+            padding: 64px 0 24px;
+        }
+
+        .paper h1 {
+            font-size: 40px;
+            letter-spacing: -0.02em;
+            margin: 0 0 8px;
+        }
+
+        .paper .tagline {
+            opacity: .9;
+            margin-bottom: 16px;
+            color: #bcd2ff;
+        }
+
+        .callout {
+            background: rgba(38, 158, 255, .08);
+            border: 1px solid rgba(38, 158, 255, .25);
+            padding: 14px 16px;
+            border-radius: 12px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .08), transparent);
+            margin: 24px 0;
+        }
+
+        .kicker {
+            font-size: .9rem;
+            color: #a6c3ff;
+            border: 1px solid #21306b;
+            padding: 2px 8px;
+            border-radius: 999px;
+        }
+
+        .oath-big {
+            margin-top: 14px;
+            padding: 20px;
+            border-radius: 16px;
+            background: linear-gradient(90deg, rgba(43, 158, 255, .18), rgba(255, 255, 255, .07));
+            border: 1px solid rgba(43, 158, 255, .45);
+            font-size: 1.08rem;
+            font-weight: 700
+        }
+
+        .pill-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #0f1b3a;
+            border: 1px solid #21306b;
+            color: #cfe3ff;
+            text-decoration: none;
+        }
+
+        .pill-link:hover {
+            filter: brightness(1.08)
+        }
+
+        .muted {
+            color: #9ab3ff
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        /* Accordion shells */
+        .section {
+            padding: 26px 0;
+        }
+
+        .acc {
+            border: 1px solid #1b2b63;
+            border-radius: 14px;
+            background: #0e1733;
+            overflow: hidden;
+        }
+
+        .acc+.section {
+            margin-top: 18px;
+        }
+
+        .acc-hd {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 14px 16px;
+            cursor: pointer;
+        }
+
+        .acc-hd h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .acc-ic {
+            transition: transform .2s ease;
+        }
+
+        .acc.open .acc-ic {
+            transform: rotate(90deg);
+        }
+
+        .acc-bd {
+            padding: 0 16px 14px;
+            display: none;
+        }
+
+        .acc.open .acc-bd {
+            display: block;
+        }
+
+        /* Reveal-on-scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Nav matching your site -->
+    <div class="nav">
+        <div class="container nav-inner">
+            <div class="brand">
+                <img class="brand-logo small" src="/assets/niko-mark.png" alt="$NIKO">
+                <div class="brand-name">$NIKO</div>
+            </div>
+            <div class="links">
+                <a href="/">About</a>
+                <a href="token.html">Token</a>
+                <a href="links.html">Links</a>
+                <a class="btn secondary" href="wolfpaper.html">📜 Wolf Paper</a>
+                <a class="btn buy"
+                    href="https://app.uniswap.org/explore/tokens/base/0x422273666d77f504e30e2573c063c7c50cce8453"
+                    target="_blank" rel="noopener">Buy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <main class="container paper">
+        <section class="paper-hero">
+            <h1>🐺 The Wolf Paper</h1>
+            <p class="tagline">NIKO — The Wolf of Base · “Loyalty is our Value. Strength is our Pack.”</p>
+            <div class="callout">
+                Today, NIKO stands as the <strong>Guardian Wolf of Base</strong> — protector of the Pack, sworn to
+                Ethereum, Base, and Loyalty.<br>
+                But every Guardian has a cub story. Act I is the beginning of his legend…
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ACT I -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🌌 The Legend of NIKO · <span class="kicker">Act I: The Cub</span></h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <p>NIKO was not always a Guardian. Once, he was just a cub, wandering the chains without guidance or
+                        protection. He was innocent, hopeful, and believed every promise whispered across the galaxy of
+                        tokens. But the chains were cruel. They punished his trust.</p>
+                    <p>Every token he touched betrayed him. Every world he visited collapsed into dust. He was rugged,
+                        scammed, drained — left with nothing but scars. The cub who once dreamed of treasure found only
+                        pain. Each rug left him emptier. Each scam left him colder.</p>
+                    <p>Other wolves gave up. Some vanished. But NIKO endured. He watched. He learned. He studied the
+                        liars’ tricks, the rug-pullers’ games, the shadow sentinels who thrived in darkness. His pain
+                        became his teacher. His failures became his training. What the galaxy tried to break only
+                        sharpened him.</p>
+                    <p>By the time he reached <strong>21</strong>, NIKO was no longer a cub. His scars became
+                        <strong>three stripes</strong> on his forehead — Ethereum, Base, and Loyalty. Not decorations,
+                        but vows: guard the Pack, honor the chains, never abandon the loyal.</p>
+                    <p>His first howl was heard on <strong>ToshiMart</strong> — a cry of defiance that drew scattered
+                        wolves together. But it was on <strong>Base</strong>, the Fortress of Loyalty, where he made his
+                        stand. Here the Pack found a home. Here the Guardian Wolf was truly born.</p>
+                    <blockquote class="oath">This was Act I. <strong>Act II: The Trials</strong> arrives next moon. The
+                        saga continues.</blockquote>
+
+                    <!-- Tiny interactive easter egg -->
+                    <div style="margin-top:12px">
+                        <a class="pill-link" id="relicBtn" href="javascript:void(0)">🗝 Reveal a relic from NIKO’s
+                            den</a>
+                        <div id="relicOut" class="muted" style="margin-top:8px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🛡 Our Mission</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Protect the Pack</h3>
+                            <p>Shield degens and newcomers from scams and rugs with tools, culture, and vigilance.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Grow Together</h3>
+                            <p>Raids, memes, and loyalty. We move as one — and we make noise.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Expand the Galaxy</h3>
+                            <p>Each blockchain is a planet. Base is home — but the Wolf roams.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Own the Culture</h3>
+                            <p>Build a Pack identity louder than the bark of any dog coin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🚀 Achievements So Far</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Market Cap (Day 1–5)</h3>
+                            <p class="lead"><span class="mono" data-count="50000">$0</span>+ MC</p>
+                            <p class="muted">Early momentum that proves the howl was heard.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Listings</h3>
+                            <p>Live on <strong>Uniswap</strong>; tracked on DEXTools & DexScreener.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Guardian Vault</h3>
+                            <p><strong>90%</strong> locked for <strong>2 years</strong>.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Transparency</h3>
+                            <p><a class="pill-link"
+                                    href="https://basescan.org/token/0x422273666d77f504e30e2573c063c7c50cce8453"
+                                    target="_blank" rel="noopener">View on BaseScan ↗</a></p>
+                            <p class="muted">Dev wallet visible; on-chain actions explained.</p>
+                            <p><strong>Circulating Supply:</strong> <span class="mono">896,820,000</span></p>
+                            <p class="muted">Circulating supply will be monitored and reported regularly.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Wolfpack</h3>
+                            <p>A growing community on Telegram & X, howling daily.</p>
+                        </div>
+                    </div>
+                    <blockquote class="oath">These are not just numbers — they are proof. <strong>The Guardian has
+                            risen. The Pack is real.</strong></blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOKENOMICS -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🔒 Tokenomics & Dev Pledge</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Total Supply</h3>
+                            <p class="mono"><strong>1,000,000,000</strong> $NIKO</p>
+                            <button class="copy" data-copy="1000000000">Copy</button>
+                        </div>
+                        <div class="card">
+                            <h3>Guardian Vault</h3>
+                            <p><strong>90%</strong> locked for <strong>2 years</strong></p>
+                        </div>
+                        <div class="card">
+                            <h3>Dev Allocation (10%)</h3>
+                            <ul class="about bullets" style="margin-left:0">
+                                <li><strong>5% Wolfpack Growth Fund</strong> — marketing, utilities, liquidity, listings
+                                </li>
+                                <li><strong>5% Guardian Reserve</strong> — emergencies & hardware that supports the
+                                    community</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="callout oath">The Guardian’s Oath: Never rug. Never dump. Always transparent. May buy
+                        dips, may lock or burn tokens — always aligned with the Pack. Every move visible. Every action
+                        explained.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALAXY -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🌌 The Galaxy of Chains</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Ethereum</h3>
+                            <p>The Elder Kingdom — gravity that binds the galaxy.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Base</h3>
+                            <p>Fortress of Loyalty — NIKO’s homeworld and den.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Neighboring Planets</h3>
+                            <p>Allies, rivals, wildlands. The Wolf roams where the Pack needs him.</p>
+                        </div>
+                    </div>
+                    <blockquote class="oath">Base is home. Ethereum is the ancestor. The galaxy is the future.
+                        <strong>Wherever the Pack goes, the Guardian Wolf follows.</strong></blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUTURE TEASERS -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🛠 Future Utilities & Gadgets (Teasers)</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Wolf Forge 🔥</h3>
+                            <p>Burn $NIKO to mint relics, badges, collectibles. Seasonal Full Moon Burns keep supply
+                                lean.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Wolf Shield 🛡</h3>
+                            <p>Staking vault with time locks + badges for loyal wolves.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Wolf Howl 📢</h3>
+                            <p>Bot suite for raids, alerts, and wallet sniffing — built to amplify the Pack.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Wolf Den 🏰</h3>
+                            <p>Lore chapters & comics revealing the saga, act by act.</p>
+                        </div>
+                    </div>
+                    <p class="muted">These are whispers of what’s ahead. Some secrets will only unlock when the moon is
+                        highest.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CULTURE -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🎭 Culture of the Pack</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="card-grid">
+                        <div class="card">
+                            <h3>Raids = Missions</h3>
+                            <p>Coordinated howls on X & Telegram. Precision over chaos.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Memes = Weapons</h3>
+                            <p>Every post strengthens the Pack. Artists + AI + community creators.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Ranks = Status</h3>
+                            <p>Pup → Raider → Sentinel → Alpha. Earn your stripes.</p>
+                        </div>
+                    </div>
+                    <blockquote class="oath">“The Wolf protects. The Pack grows. The Guardians stay loyal.”</blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLEX -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>⚡ Adapting to the Future</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <div class="callout">Crypto moves fast. New chains rise, new tools emerge, memes evolve overnight.
+                        That’s why NIKO’s roadmap is <strong>living and adaptive</strong>. If a new path makes the Pack
+                        stronger, we take it. If the Pack prefers an old path, we keep it. Always transparent. Always
+                        ahead. The Wolf adapts. The Pack thrives.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OATH -->
+        <section class="section">
+            <div class="acc open reveal">
+                <div class="acc-hd" data-acc>
+                    <h2>🌕 The Pack Oath</h2>
+                    <div class="acc-ic">▶</div>
+                </div>
+                <div class="acc-bd">
+                    <blockquote class="oath-big">
+                        We are not stray dogs chasing pumps. We are Wolves — loyal, unyielding, guardians of the chain.
+                        <strong>Loyalty is our value. Strength is our Pack. We are NIKO.</strong>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer">
+        <div class="container foot-inner">
+            <small>© 2025 NIKO — The Wolf of Base.</small>
+            <div class="links">
+                <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+                <a href="https://x.com/NikoToken" target="_blank" rel="noopener">X</a>
+                <a href="https://dexscreener.com/base/0xa800f8f40afe96c15eab496c7194f84cae486990" target="_blank"
+                    rel="noopener">DexScreener</a>
+                <a href="https://www.dextools.io/app/en/token/noki" target="_blank" rel="noopener">DEXTools</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Minimal JS: accordion, count-up, copy, relics, reveal-on-scroll -->
+    <script>
+        // Accordion toggles
+        document.querySelectorAll('[data-acc]').forEach(hd => {
+            hd.addEventListener('click', () => hd.parentElement.classList.toggle('open'));
+        });
+
+        // Reveal on scroll
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        // Count up numbers (Achievements)
+        const counters = document.querySelectorAll('[data-count]');
+        const seen = new WeakSet();
+        const obs2 = new IntersectionObserver((ents) => {
+            ents.forEach(ent => {
+                if (ent.isIntersecting && !seen.has(ent.target)) {
+                    seen.add(ent.target);
+                    const el = ent.target;
+                    const target = +el.getAttribute('data-count');
+                    const dur = 1000, start = performance.now();
+                    const step = (t) => {
+                        const p = Math.min((t - start) / dur, 1);
+                        const val = Math.floor(target * p);
+                        el.textContent = '$' + val.toLocaleString();
+                        if (p < 1) requestAnimationFrame(step);
+                    };
+                    requestAnimationFrame(step);
+                }
+            });
+        }, { threshold: 0.4 });
+        counters.forEach(el => obs2.observe(el));
+
+        // Copy buttons (token supply example; add more if you want)
+        document.querySelectorAll('.copy[data-copy]').forEach(btn => {
+            btn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(btn.getAttribute('data-copy'));
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => btn.textContent = 'Copy', 1000);
+                } catch (e) { btn.textContent = 'Error'; }
+            });
+        });
+
+        // Relic easter egg
+        const relics = [
+            'A cracked shard from a fallen rug-planet — still humming faintly.',
+            'A silver tag etched with three stripes: ETH, Base, Loyalty.',
+            'A burnt contract scroll — proof that the Wolf rugs the rugs.',
+            'A star-map pin marking the Elder Kingdom and the Fortress of Loyalty.',
+            'A medal carved from LP stone — earned in the First Five Days.',
+            'A howl-charm braided from Pack memes — power when raiding.'
+        ];
+        document.getElementById('relicBtn')?.addEventListener('click', () => {
+            const msg = relics[Math.floor(Math.random() * relics.length)];
+            document.getElementById('relicOut').textContent = msg;
+        });
+    </script>
+</body>
+
+</html>
