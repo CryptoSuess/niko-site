@@ -19,6 +19,11 @@
 </head>
 
 <body>
+  <!-- ANIMATED STARFIELD -->
+  <div class="starfield" aria-hidden="true">
+    <canvas id="starCanvas"></canvas>
+  </div>
+
   <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
@@ -30,6 +35,7 @@
         <a href="#about">About</a>
         <a href="#token">Token</a>
         <a href="#links">Links</a>
+        <a href="#projects">Projects</a>
         <a href="/wolfpaper.html" class="btn secondary">📜 Wolf Paper</a>
         <a class="btn buy" id="buyBtn" href="#">Buy</a>
       </nav>
@@ -40,9 +46,8 @@
   <section class="hero container">
     <div class="hero-copy">
       <h1>NIKO — <span class="accent">The Wolf of Base</span></h1>
-      <p class="lead">Loyalty Is Our Value. The first Guardian of DeFi protecting ETH & the Base chain with
-  Loyalty Is Our Value. Born on Base, destined to guard all blockchains. The first Guardian of DeFi 
-  protecting the entire ecosystem with strength, trust, and unity.</p>
+      <p class="lead">Loyalty Is Our Value. Born on Base, destined to guard all blockchains. The first Guardian of DeFi
+        protecting the entire ecosystem with strength, trust, and unity.</p>
       <div class="cta">
         <a class="btn primary" id="tradeLink" href="#">Trade on Uniswap</a>
         <a class="btn secondary" id="chartLink" href="#">Open DEXTools</a>
@@ -60,34 +65,46 @@
     </div>
   </section>
 
+  <div class="glow-divider"></div>
+
   <!-- ABOUT -->
-  <section id="about" class="section container about">
-    <h2>The Blockchain Guardian Has Arrived ⚡</h2>
-    <p>While everyone’s chasing the next 100x, smart money is backing the <strong>Protector</strong>.</p>
-    <p><strong>$NIKO</strong> isn’t just another token. <strong>$NIKO is the FIRST Guardian of DeFi.</strong></p>
-    <ul class="bullets">
+  <section id="about" class="section container about" style="position:relative;">
+    <div class="parallax-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <h2 class="reveal">The Blockchain Guardian Has Arrived ⚡</h2>
+    <p class="reveal">While everyone's chasing the next 100x, smart money is backing the <strong>Protector</strong>.</p>
+    <p class="reveal"><strong>$NIKO</strong> isn't just another token. <strong>$NIKO is the FIRST Guardian of DeFi.</strong></p>
+    <ul class="bullets reveal">
       <li><strong>Not</strong> here to pump and dump</li>
       <li>Built to <strong>protect the space</strong> we all love</li>
       <li>A community of 🐺 <strong>WOLVES, not sheep</strong></li>
       <li>Blue-streaked, battle-tested, blockchain native</li>
     </ul>
-    <div class="pill-row">
-      <span class="pill">📈 Just went live on Uniswap</span>
-      <span class="pill">🛡️Forge & Shield Coming Soon! Test Net Preview</span>
+    <div class="pill-row reveal-stagger reveal">
+      <span class="pill">📈 Live on Uniswap</span>
+      <span class="pill">🦎 Listed on GeckoTerminal</span>
+      <span class="pill">💰 Listed on Coinbase</span>
+      <span class="pill">🛡️ Forge & Shield Coming Soon! Test Net Preview</span>
       <span class="pill">🌕 Pack is 46+ strong</span>
     </div>
-    <p>The crypto space doesn’t need more gamblers. It needs <strong>Guardians</strong>.</p>
-    <p>Every bull run has its legendary stories…<br />
+    <p class="reveal">The crypto space doesn't need more gamblers. It needs <strong>Guardians</strong>.</p>
+    <p class="reveal">Every bull run has its legendary stories…<br />
       Every legendary story has its <strong>Guardian</strong>…<br />
       Every Guardian has its <strong>Pack</strong>…</p>
-    <p><a id="tgCta" class="btn primary" href="#" target="_blank" rel="noopener">Join the pack on Telegram</a></p>
-    <!-- Removed the gamer line per your request -->
+    <p class="reveal"><a id="tgCta" class="btn primary" href="#" target="_blank" rel="noopener">Join the pack on Telegram</a></p>
   </section>
 
+  <div class="glow-divider"></div>
+
   <!-- TOKEN -->
-  <section id="token" class="section container token">
-    <h2>Token Details</h2>
-    <div class="grid">
+  <section id="token" class="section container token" style="position:relative;">
+    <div class="parallax-bg" aria-hidden="true">
+      <div class="orb orb-3"></div>
+    </div>
+    <h2 class="reveal">Token Details</h2>
+    <div class="grid reveal-stagger reveal">
       <div class="card">
         <h3>Contract</h3>
         <code id="contractDisplay">0x422273666d77f504e30e2573c063c7c50cce8453</code>
@@ -99,25 +116,47 @@
       </div>
       <div class="card">
         <h3>Total Supply</h3>
-        <p>896,820,000 $NIKO</p>
+        <p>849,500,000 $NIKO</p>
       </div>
       <div class="card">
         <h3>Dev Supply Lock</h3>
         <p>🔒 90% locked (2 years) Slow Release</p>
       </div>
     </div>
-    <div class="notice">* Always verify the contract address in our official channels before trading.</div>
+    <div class="notice reveal">* Always verify the contract address in our official channels before trading.</div>
   </section>
+
+  <div class="glow-divider"></div>
 
   <!-- LINKS -->
   <section id="links" class="section container links">
-    <h2>Official Links</h2>
-    <div class="grid links-grid">
+    <h2 class="reveal">Official Links</h2>
+    <div class="grid links-grid reveal-stagger reveal">
       <a class="linkcard" id="tgLink" target="_blank" rel="noopener">Telegram</a>
       <a class="linkcard" id="xLink" target="_blank" rel="noopener">X</a>
       <a class="linkcard" id="dexsLink" target="_blank" rel="noopener">DexScreener</a>
       <a class="linkcard" id="dextLink" target="_blank" rel="noopener">DEXTools</a>
+      <a class="linkcard" id="geckoLink" target="_blank" rel="noopener">GeckoTerminal</a>
       <a class="linkcard" id="uncxLink" target="_blank" rel="noopener">UNCX Lock</a>
+      <a class="linkcard" id="coinbaseLink" target="_blank" rel="noopener">Coinbase</a>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section container">
+    <h2 class="reveal">Our Projects 🛠️</h2>
+    <p class="reveal">Built by the Pack. Tools and platforms from the NIKO ecosystem.</p>
+    <div class="grid projects-grid reveal-stagger reveal">
+      <a class="projectcard" id="baseAlphaLink" target="_blank" rel="noopener">
+        <h3>BaseAlpha</h3>
+        <p>Meme token launcher on Base</p>
+      </a>
+      <a class="projectcard" id="forgeShieldLink" target="_blank" rel="noopener">
+        <h3>Forge & Shield</h3>
+        <p>DeFi protection tools for the Pack</p>
+      </a>
     </div>
   </section>
 
