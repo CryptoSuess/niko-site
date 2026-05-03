@@ -6,11 +6,11 @@ if (yearEl) yearEl.textContent = '2025';
 const CONTRACT = '0x422273666d77f504e30e2573c063c7c50cce8453';
 const URLS = {
   uniswap: `https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=${CONTRACT}&chain=base`,
-  dextools: 'https://www.dextools.io/app/en/base/pair-explorer/0x422273666d77f504e30e2573c063c7c50cce8453',
+  dextools: 'https://www.dextools.io/app/token/noki',
   dexscreener: 'https://dexscreener.com/base/0x422273666d77f504e30e2573c063c7c50cce8453',
   gecko: 'https://www.geckoterminal.com/base/pools/0x422273666d77f504e30e2573c063c7c50cce8453',
-  basewallet: 'https://wallet.coinbase.com/assets/base/0x422273666d77f504e30e2573c063c7c50cce8453',
-  coinbase: 'https://www.coinbase.com/price/niko',
+  coinbase: 'https://www.coinbase.com/price/base-niko-8453',
+  basealpha: 'https://www.basealpha.fun',
   telegram: 'https://t.me/+2pnnko2IHooxMjcx',
   x: 'https://x.com/NikoToken',
   uncx: 'https://app.uncx.network/lockers/token/chain/8453/address/0x422273666d77f504e30e2573c063c7c50cce8453',
@@ -33,7 +33,7 @@ const dexsLink = byId('dexsLink');
 const dextLink = byId('dextLink');
 const geckoLink = byId('geckoLink');
 const uncxLink = byId('uncxLink');
-const baseWalletLink = byId('baseWalletLink');
+const baseAlphaLink = byId('baseAlphaLink');
 const coinbaseLink = byId('coinbaseLink');
 const tgCta = byId('tgCta');
 
@@ -43,7 +43,7 @@ if (dexsLink) { dexsLink.href = URLS.dexscreener; dexsLink.target = '_blank'; de
 if (dextLink) { dextLink.href = URLS.dextools; dextLink.target = '_blank'; dextLink.rel = 'noopener'; }
 if (geckoLink) { geckoLink.href = URLS.gecko; geckoLink.target = '_blank'; geckoLink.rel = 'noopener'; }
 if (uncxLink) { uncxLink.href = URLS.uncx; uncxLink.target = '_blank'; uncxLink.rel = 'noopener'; }
-if (baseWalletLink) { baseWalletLink.href = URLS.basewallet; baseWalletLink.target = '_blank'; baseWalletLink.rel = 'noopener'; }
+if (baseAlphaLink) { baseAlphaLink.href = URLS.basealpha; baseAlphaLink.target = '_blank'; baseAlphaLink.rel = 'noopener'; }
 if (coinbaseLink) { coinbaseLink.href = URLS.coinbase; coinbaseLink.target = '_blank'; coinbaseLink.rel = 'noopener'; }
 
 // --- Contract display
