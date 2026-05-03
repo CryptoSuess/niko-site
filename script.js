@@ -11,6 +11,7 @@ const URLS = {
   gecko: 'https://www.geckoterminal.com/base/pools/0x422273666d77f504e30e2573c063c7c50cce8453',
   coinbase: 'https://www.coinbase.com/price/base-niko-8453',
   basealpha: 'https://www.basealpha.fun',
+  forgeshield: 'https://forge-shield-main.vercel.app',
   telegram: 'https://t.me/+2pnnko2IHooxMjcx',
   x: 'https://x.com/NikoToken',
   uncx: 'https://app.uncx.network/lockers/token/chain/8453/address/0x422273666d77f504e30e2573c063c7c50cce8453',
@@ -34,6 +35,7 @@ const dextLink = byId('dextLink');
 const geckoLink = byId('geckoLink');
 const uncxLink = byId('uncxLink');
 const baseAlphaLink = byId('baseAlphaLink');
+const forgeShieldLink = byId('forgeShieldLink');
 const coinbaseLink = byId('coinbaseLink');
 const tgCta = byId('tgCta');
 
@@ -44,6 +46,7 @@ if (dextLink) { dextLink.href = URLS.dextools; dextLink.target = '_blank'; dextL
 if (geckoLink) { geckoLink.href = URLS.gecko; geckoLink.target = '_blank'; geckoLink.rel = 'noopener'; }
 if (uncxLink) { uncxLink.href = URLS.uncx; uncxLink.target = '_blank'; uncxLink.rel = 'noopener'; }
 if (baseAlphaLink) { baseAlphaLink.href = URLS.basealpha; baseAlphaLink.target = '_blank'; baseAlphaLink.rel = 'noopener'; }
+if (forgeShieldLink) { forgeShieldLink.href = URLS.forgeshield; forgeShieldLink.target = '_blank'; forgeShieldLink.rel = 'noopener'; }
 if (coinbaseLink) { coinbaseLink.href = URLS.coinbase; coinbaseLink.target = '_blank'; coinbaseLink.rel = 'noopener'; }
 
 // --- Contract display

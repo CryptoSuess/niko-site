@@ -413,6 +413,48 @@ code {
   gap: 12px;
 }
 
+/* ===== PROJECT CARDS ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.projectcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(14, 23, 51, .7);
+  border: 1px solid rgba(43, 158, 255, .25);
+  padding: 28px 20px;
+  border-radius: 16px;
+  color: #cfe3ff;
+  text-decoration: none;
+  text-align: center;
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .2);
+}
+
+.projectcard:hover {
+  transform: translateY(-4px);
+  border-color: #67e8f9;
+  box-shadow: 0 12px 40px rgba(103, 232, 249, .15);
+}
+
+.projectcard h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #67e8f9;
+  font-weight: 800;
+}
+
+.projectcard p {
+  margin: 0;
+  font-size: 14px;
+  color: #9ab3ff;
+}
+
 .linkcard {
   display: flex;
   align-items: center;
@@ -683,6 +725,7 @@ code {
 @media (max-width: 900px) {
   .token .grid { grid-template-columns: repeat(2, 1fr); }
   .links-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
