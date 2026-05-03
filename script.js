@@ -8,6 +8,9 @@ const URLS = {
   uniswap: `https://app.uniswap.org/swap?inputCurrency=ETH&outputCurrency=${CONTRACT}&chain=base`,
   dextools: 'https://www.dextools.io/app/en/base/pair-explorer/0x422273666d77f504e30e2573c063c7c50cce8453',
   dexscreener: 'https://dexscreener.com/base/0x422273666d77f504e30e2573c063c7c50cce8453',
+  gecko: 'https://www.geckoterminal.com/base/pools/0x422273666d77f504e30e2573c063c7c50cce8453',
+  basewallet: 'https://wallet.coinbase.com/assets/base/0x422273666d77f504e30e2573c063c7c50cce8453',
+  coinbase: 'https://www.coinbase.com/price/niko',
   telegram: 'https://t.me/+2pnnko2IHooxMjcx',
   x: 'https://x.com/NikoToken',
   uncx: 'https://app.uncx.network/lockers/token/chain/8453/address/0x422273666d77f504e30e2573c063c7c50cce8453',
@@ -28,14 +31,20 @@ const tgLink = byId('tgLink');
 const xLink = byId('xLink');
 const dexsLink = byId('dexsLink');
 const dextLink = byId('dextLink');
+const geckoLink = byId('geckoLink');
 const uncxLink = byId('uncxLink');
+const baseWalletLink = byId('baseWalletLink');
+const coinbaseLink = byId('coinbaseLink');
 const tgCta = byId('tgCta');
 
 [tgLink, tgCta].forEach(el => { if (el) { el.href = URLS.telegram; el.target = '_blank'; el.rel = 'noopener'; } });
 if (xLink) { xLink.href = URLS.x; xLink.target = '_blank'; xLink.rel = 'noopener'; }
 if (dexsLink) { dexsLink.href = URLS.dexscreener; dexsLink.target = '_blank'; dexsLink.rel = 'noopener'; }
 if (dextLink) { dextLink.href = URLS.dextools; dextLink.target = '_blank'; dextLink.rel = 'noopener'; }
+if (geckoLink) { geckoLink.href = URLS.gecko; geckoLink.target = '_blank'; geckoLink.rel = 'noopener'; }
 if (uncxLink) { uncxLink.href = URLS.uncx; uncxLink.target = '_blank'; uncxLink.rel = 'noopener'; }
+if (baseWalletLink) { baseWalletLink.href = URLS.basewallet; baseWalletLink.target = '_blank'; baseWalletLink.rel = 'noopener'; }
+if (coinbaseLink) { coinbaseLink.href = URLS.coinbase; coinbaseLink.target = '_blank'; coinbaseLink.rel = 'noopener'; }
 
 // --- Contract display
 const contractDisplay = byId('contractDisplay');
