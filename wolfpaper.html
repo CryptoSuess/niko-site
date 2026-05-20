@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/niko-wolf.svg" />
+    <meta property="og:title" content="NIKO — Wolf Paper" />
+    <meta property="og:description" content="The legend, mission, and tokenomics of NIKO — The Wolf of Base." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/niko-wolf.svg" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
         /* Page-local tweaks only; keeps your main CSS intact */
@@ -148,17 +153,22 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- Top Nav matching your site -->
     <div class="nav">
         <div class="container nav-inner">
             <div class="brand">
-                <img class="brand-logo small" src="/assets/niko-mark.png" alt="$NIKO">
+                <img class="brand-logo small" src="/assets/niko-wolf.svg" alt="$NIKO">
                 <div class="brand-name">$NIKO</div>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
             <div class="links">
                 <a href="/">About</a>
-                <a href="/token.html">Token</a>
-                <a href="/links.html">Links</a>
+                <a href="/#token">Token</a>
+                <a href="/#links">Links</a>
                 <a class="btn secondary" href="/wolfpaper.html">📜 Wolf Paper</a>
                 <a class="btn buy"
                     href="https://app.uniswap.org/explore/tokens/base/0x422273666d77f504e30e2573c063c7c50cce8453"
@@ -168,7 +178,7 @@
     </div>
 
     <!-- Hero -->
-    <main class="container paper">
+    <main id="main-content" class="container paper">
         <section class="paper-hero">
             <h1>🐺 The Wolf Paper</h1>
             <p class="tagline">NIKO — The Wolf of Base · “Loyalty is our Value. Strength is our Pack.”</p>
@@ -303,7 +313,7 @@
                         <div class="card">
                             <h3>Total Supply</h3>
                             <p class="mono"><strong>849,500,000</strong> $NIKO</p>
-                            <button class="copy" data-copy="1000000000">Copy</button>
+                            <button class="copy" data-copy="849500000">Copy</button>
                         </div>
                         <div class="card">
                             <h3>Guardian Vault</h3>
@@ -375,10 +385,6 @@
                         The Wolf of Base becomes the Guardian of BlockChains — not by abandoning home, 
                         but by expanding the protection to all who need it.
                     </div>
-                </div>
-            </div>
-        </section>
-                    </blockquote>
                 </div>
             </div>
         </section>
@@ -491,6 +497,17 @@
 
     <!-- Minimal JS: accordion, count-up, copy, relics, reveal-on-scroll -->
     <script>
+        // Hamburger menu toggle
+        (function initHamburger() {
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.nav');
+            if (!toggle || !nav) return;
+            toggle.addEventListener('click', () => {
+                const isOpen = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', String(isOpen));
+            });
+        })();
+
         // Accordion toggles
         document.querySelectorAll('[data-acc]').forEach(hd => {
             hd.addEventListener('click', () => hd.parentElement.classList.toggle('open'));
