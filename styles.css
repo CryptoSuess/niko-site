@@ -1,3 +1,22 @@
+/* ===== SKIP LINK (Accessibility) ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top .2s ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -728,11 +747,98 @@ code {
   .projects-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== HAMBURGER MENU ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid #3b5ccc;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #cfe3ff;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.nav-toggle .hamburger {
+  position: relative;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle .hamburger::before {
+  top: -6px;
+}
+
+.nav-toggle .hamburger::after {
+  top: 6px;
+}
+
+/* Animate to X when open */
+.nav.open .nav-toggle .hamburger {
+  background: transparent;
+}
+
+.nav.open .nav-toggle .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav.open .nav-toggle .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 @media (max-width: 600px) {
   .hero h1 { font-size: 32px; }
-  .links { display: none; }
   .token .grid { grid-template-columns: 1fr; }
   .links-grid { grid-template-columns: 1fr; }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(10, 16, 32, .96);
+    border-bottom: 1px solid rgba(27, 35, 66, .6);
+    padding: 16px 20px;
+    gap: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav.open .links {
+    display: flex;
+  }
+
+  .links a {
+    margin: 0;
+    padding: 8px 0;
+  }
 }
 
 /* Only show floating CTA on small screens */

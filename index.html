@@ -10,8 +10,8 @@
   <meta property="og:title" content="NIKO — The Wolf of Base" />
   <meta property="og:description" content="Loyalty Is Our Value. The first Guardian of DeFi on Base." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.png" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <meta property="og:image" content="assets/niko-wolf.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/niko-wolf.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -19,6 +19,8 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <!-- ANIMATED STARFIELD -->
   <div class="starfield" aria-hidden="true">
     <canvas id="starCanvas"></canvas>
@@ -28,9 +30,12 @@
   <header class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <img src="assets/logo.png" alt="NIKO logo" class="brand-logo" />
+        <img src="assets/niko-wolf.svg" alt="NIKO logo" class="brand-logo" />
         <span class="brand-name">$NIKO</span>
       </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
       <nav class="links">
         <a href="#about">About</a>
         <a href="#token">Token</a>
@@ -43,7 +48,7 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero container">
+  <section id="main-content" class="hero container">
     <div class="hero-copy">
       <h1>NIKO — <span class="accent">The Wolf of Base</span></h1>
       <p class="lead">Loyalty Is Our Value. Born on Base, destined to guard all blockchains. The first Guardian of DeFi
@@ -82,6 +87,9 @@
       <li>A community of 🐺 <strong>WOLVES, not sheep</strong></li>
       <li>Blue-streaked, battle-tested, blockchain native</li>
     </ul>
+    <blockquote class="reveal">
+      NIKO was created for everyone tired of rugs, fake communities, and empty hype. The Pack stands for loyalty, transparency, and building something that survives beyond market cycles.
+    </blockquote>
     <div class="pill-row reveal-stagger reveal">
       <span class="pill">📈 Live on Uniswap</span>
       <span class="pill">🦎 Listed on GeckoTerminal</span>
@@ -128,17 +136,46 @@
 
   <div class="glow-divider"></div>
 
+  <!-- PACK ECONOMICS -->
+  <section id="economics" class="section container" style="position:relative;">
+    <h2 class="reveal">Pack Economics 🐺</h2>
+    <p class="reveal">NIKO is designed around long-term loyalty, transparency, and ecosystem-driven growth.</p>
+    <div class="grid reveal-stagger reveal">
+      <div class="card"><h3>🔥 Future Ecosystem Burns</h3><p>Strategic burns tied to milestones and Wolf Forge mechanics.</p></div>
+      <div class="card"><h3>🛡 Diamond Paws Locking</h3><p>Rewarding long-term holders who lock with the Pack.</p></div>
+      <div class="card"><h3>🐺 Pack Rank Progression</h3><p>Earn your stripes through loyalty and participation.</p></div>
+      <div class="card"><h3>⚒ Wolf Forge Utilities</h3><p>Burn $NIKO to mint relics, badges, and collectibles.</p></div>
+      <div class="card"><h3>📊 Transparent Community Growth</h3><p>Every move visible. Every action explained.</p></div>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- TRANSPARENCY -->
+  <section id="transparency" class="section container">
+    <h2 class="reveal">Transparency 🔍</h2>
+    <div class="grid reveal-stagger reveal">
+      <div class="card"><h3>🔒 100M Dev Locked</h3><p>Long-term commitment to the Pack.</p></div>
+      <div class="card"><h3>📜 Public Contract</h3><p>Fully verified and visible on-chain.</p></div>
+      <div class="card"><h3>🐺 Community Driven</h3><p>The Pack decides. The Wolf listens.</p></div>
+      <div class="card"><h3>🛡 Long-Term Vision</h3><p>Building beyond market cycles.</p></div>
+      <div class="card"><h3>🔥 Future Deflationary Mechanics</h3><p>Strategic supply reduction over time.</p></div>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
   <!-- LINKS -->
   <section id="links" class="section container links">
     <h2 class="reveal">Official Links</h2>
     <div class="grid links-grid reveal-stagger reveal">
-      <a class="linkcard" id="tgLink" target="_blank" rel="noopener">Telegram</a>
-      <a class="linkcard" id="xLink" target="_blank" rel="noopener">X</a>
-      <a class="linkcard" id="dexsLink" target="_blank" rel="noopener">DexScreener</a>
-      <a class="linkcard" id="dextLink" target="_blank" rel="noopener">DEXTools</a>
-      <a class="linkcard" id="geckoLink" target="_blank" rel="noopener">GeckoTerminal</a>
-      <a class="linkcard" id="uncxLink" target="_blank" rel="noopener">UNCX Lock</a>
-      <a class="linkcard" id="coinbaseLink" target="_blank" rel="noopener">Coinbase</a>
+      <a class="linkcard" id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
+      <a class="linkcard" id="xLink" href="#" target="_blank" rel="noopener">X</a>
+      <a class="linkcard" id="dexsLink" href="#" target="_blank" rel="noopener">DexScreener</a>
+      <a class="linkcard" id="dextLink" href="#" target="_blank" rel="noopener">DEXTools</a>
+      <a class="linkcard" id="geckoLink" href="#" target="_blank" rel="noopener">GeckoTerminal</a>
+      <a class="linkcard" id="uncxLink" href="#" target="_blank" rel="noopener">UNCX Lock</a>
+      <a class="linkcard" id="coinbaseLink" href="#" target="_blank" rel="noopener">Coinbase</a>
     </div>
   </section>
 
@@ -149,11 +186,11 @@
     <h2 class="reveal">Our Projects 🛠️</h2>
     <p class="reveal">Built by the Pack. Tools and platforms from the NIKO ecosystem.</p>
     <div class="grid projects-grid reveal-stagger reveal">
-      <a class="projectcard" id="baseAlphaLink" target="_blank" rel="noopener">
+      <a class="projectcard" id="baseAlphaLink" href="#" target="_blank" rel="noopener">
         <h3>BaseAlpha</h3>
         <p>Meme token launcher on Base</p>
       </a>
-      <a class="projectcard" id="forgeShieldLink" target="_blank" rel="noopener">
+      <a class="projectcard" id="forgeShieldLink" href="#" target="_blank" rel="noopener">
         <h3>Forge & Shield</h3>
         <p>DeFi protection tools for the Pack</p>
       </a>
@@ -164,7 +201,7 @@
   <footer class="footer">
     <div class="container foot-inner">
       <div class="brand">
-        <img src="assets/logo.png" class="brand-logo small" alt="NIKO logo small" />
+        <img src="assets/niko-wolf.svg" class="brand-logo small" alt="NIKO logo small" />
         <span class="brand-name">$NIKO</span>
       </div>
       <div class="foot-right">© <span id="year"></span> NIKO — The Wolf of Base.</div>

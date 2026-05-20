@@ -110,7 +110,17 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }
 
   let time = 0;
+
+  function resumeDraw() {
+    if (!document.hidden) requestAnimationFrame(draw);
+  }
+
   function draw() {
+    if (document.hidden) {
+      document.addEventListener('visibilitychange', resumeDraw, { once: true });
+      return;
+    }
+
     ctx.clearRect(0, 0, w, h);
     time += 0.016;
 
@@ -209,6 +219,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     } else {
       nav.style.background = '';
     }
+  });
+})();
+
+// ===== HAMBURGER MENU TOGGLE =====
+(function initHamburger() {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 })();
 
